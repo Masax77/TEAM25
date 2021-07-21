@@ -1,16 +1,6 @@
 @extends('layout')
 @section('title', '休日設定')
 @section('content')
-    <head>
-        <!-- <form name="Logout" method="post" action="/cgi-bin/Logout.cgi">  -->
-            <!-- <input type="submit" value="Logout" />  -->
-        <!-- </form> -->
-        <p><button onclick="return confirm('ログアウトします。よろしいですか。')">ログアウト</button></p>
-        @if (Auth::check()) 
-            <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p> -->
-            @else<p>※ログインしていません。(<a href="/login">ログイン</a> | <a href="/register">登録</a> )</p> 
-        @endif
-    </head>
     <h1>休日設定</h1>
     <!-- 休日入力フォーム -->
     <form method="POST" action="/holiday"> 
@@ -62,7 +52,8 @@
             @endforeach
         <tbody>
     </table>
-    <a href="{{ url('/index') }}">カレンダーに戻る</a>
+    <a href="{{ url('/index') }}">カレンダーに戻る</a><br>
+    <a href="{{ url('/home') }}">ホームからのログアウト</a>
     <script>
     $( function() {
         $( "#day").datepicker({dateFormat: 'yy-mm-dd'});
