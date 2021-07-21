@@ -24,10 +24,14 @@ Route::get('/holiday/{id}', 'App\Http\Controllers\CalendarController@getHolidayI
 Route::delete('/holiday', 'App\Http\Controllers\CalendarController@deleteHoliday');
 
 // カレンダー表示
-Route::get('/index', 'App\Http\Controllers\CalendarController@index');
+ Route::get('/index', 'App\Http\Controllers\CalendarController@index');
+    
 
 
 // カレンダー組み込みログイン画面
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/index', [App\Http\Controllers\CalendarController::class, 'index'])->name('index');
+
+
