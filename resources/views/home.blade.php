@@ -14,9 +14,10 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('登録完了しました') }}
                 </div>
             </div>
+            <a href="login"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ホーム画面へ</a>
         </div>
     </div>
 </div>
